@@ -26,3 +26,4 @@ TBD
 ## Change Log
 10-17-2019 - 1.0.0
 - Scaffolded Django application
+- Added Movie model
