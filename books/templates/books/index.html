@@ -1,0 +1,10 @@
+<ul>
+    {% for book in books_list %}
+    <li>
+        <h1>{{ book.title }} by {{ book.author }}</h1>
+        <p>Published: {{ book.published }}</p>
+        <p>Platform: {{ book.platform }}</p>
+        <p>Format: {{ book.form }}</p>
+    </li>
+    {% endfor %}
+</ul>

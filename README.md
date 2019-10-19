@@ -27,3 +27,10 @@ TBD
 10-17-2019 - 1.0.0
 - Scaffolded Django application
 - Added Movie model
+
+10-18-2019
+- Added Shows model
+- Added Books model
+
+10-19-2019
+- Added list and detail view for models
