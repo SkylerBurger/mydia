@@ -8,7 +8,7 @@ class IndexView(generic.ListView):
     context_object_name = 'shows_list'
 
     def get_queryset(self):
-        """Return the first five movies."""
+        """Return the first five shows."""
         return Show.objects.order_by('title')[:5]
 
 

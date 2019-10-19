@@ -33,4 +33,4 @@ TBD
 - Added Books model
 
 10-19-2019
-- Added list and detail view for Shows
+- Added list and detail view for models

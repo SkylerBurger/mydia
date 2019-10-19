@@ -1,8 +1,17 @@
-from django.shortcuts import render
-# tutorial line below
-from django.http import HttpResponse
+from django.views import generic
 
-# Create your views here.
+from .models import Movie
 
-def index(request):
-    return HttpResponse("Hello, this is the movies page.")
+
+class IndexView(generic.ListView):
+    template_name = 'movies/index.html'
+    context_object_name = 'movies_list'
+
+    def get_queryset(self):
+        """Return the first five movies."""
+        return Movie.objects.order_by('title')[:5]
+
+
+class DetailView(generic.DetailView):
+    model = Movie
+    template_name = 'movies/detail.html'

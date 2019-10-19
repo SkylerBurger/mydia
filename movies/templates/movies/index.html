@@ -1,0 +1,11 @@
+<ul>
+    {% for movie in movies_list %}
+        <li>
+            <h1>{{ movie.title }} ({{ movie.release_year }})</h1>
+            <p>Rating: {{ movie.mpaa_rating }}</p>
+            <p>Runtime: {{ movie.run_time }}</p>
+            <p>Platform: {{ movie.platform }}</p>
+            <p>Format: {{ movie.form }}</p>
+        </li>    
+    {% endfor %}
+</ul>
