@@ -4,7 +4,7 @@ from django.db import models
 class Show(models.Model):
     title = models.CharField('title', max_length=200)
     season = models.IntegerField('season')
-    release_year = models.CharField('release year', max_length=5)
+    release_year = models.IntegerField('release year')
     platform = models.CharField('platform', max_length=200)
     form = models.CharField('format', max_length=200)
 
