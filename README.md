@@ -5,7 +5,7 @@
 **Version**: 1.1.0
 
 ## Overview
-Have you ever forgotten if you purchased that movie on DVD or Google Play? Which online store did you pick up that copy of Stephen King's IT? Did I pay for the latest season of American Horror Story on Prime Video or Vudu? 
+Have you ever forgotten if you purchased that movie on DVD or Google Play? From which online store did you pick up that copy of Stephen King's IT? Did I pay for the latest season of American Horror Story on Prime Video or Vudu? 
 
 Whether digital or physical, :star: **Mydia** :star: is here to catalog your media and the many places it may live.
 
