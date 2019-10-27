@@ -11,6 +11,7 @@ class MovieCopySerializer(serializers.ModelSerializer):
 
 class MovieSerializer(serializers.ModelSerializer):
     copies = MovieCopySerializer(many=True, read_only=True)
+    
     class Meta:
         model = Movie
         fields = ['title', 'release_year', 'mpaa_rating', 'run_time', 'copies']
