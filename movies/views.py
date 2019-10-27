@@ -1,17 +1,16 @@
-from django.views import generic
+from rest_framework import generics
 
 from .models import Movie
+from .serializers import MovieSerializer
 
 
-class IndexView(generic.ListView):
-    template_name = 'movies/index.html'
-    context_object_name = 'movies_list'
-
-    def get_queryset(self):
-        """Return the first five movies."""
-        return Movie.objects.order_by('title')[:5]
+class MovieList(generics.ListCreateAPIView):
+    """ Lists all movies, or create a new movie."""
+    queryset = Movie.objects.all()
+    serializer_class = MovieSerializer
 
 
-class DetailView(generic.DetailView):
-    model = Movie
-    template_name = 'movies/detail.html'
+class MovieDetail(generics.RetrieveUpdateDestroyAPIView):
+    """ Retrieve, update, or delete a movie instance."""
+    queryset = Movie.objects.all()
+    serializer_class = MovieSerializer
