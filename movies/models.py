@@ -12,7 +12,7 @@ class Movie(models.Model):
 
 
 class MovieCopy(models.Model):
-    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    movie = models.ForeignKey(Movie, related_name='copies', on_delete=models.CASCADE)
     platform = models.CharField('platform', max_length=200)
     form = models.CharField('format', max_length=200)
 
