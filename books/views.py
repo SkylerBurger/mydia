@@ -1,17 +1,16 @@
-from django.views import generic
+from rest_framework import generics
 
 from .models import Book
+from .serializers import BookSerializer
 
 
-class IndexView(generic.ListView):
-    template_name = 'books/index.html'
-    context_object_name = 'books_list'
-
-    def get_queryset(self):
-        """Return the first five books."""
-        return Book.objects.order_by('title')[:5]
+class BookList(generics.ListCreateAPIView):
+    """Lists all books, or create a new book."""
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
 
 
-class DetailView(generic.DetailView):
-    model = Book
-    template_name = 'books/detail.html'
+class BookDetail(generics.RetrieveUpdateDestroyAPIView):
+    """Retrieve, update, or delete a book instance."""
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer

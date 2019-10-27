@@ -5,6 +5,6 @@ from . import views
 
 app_name = 'shows'
 urlpatterns = [
-    path('', views.IndexView.as_view(), name='index'),
-    path('<int:pk>/', views.DetailView.as_view(), name='detail')
+    path('', views.ShowList.as_view(), name='index'),
+    path('<int:pk>/', views.ShowDetail.as_view(), name='detail')
 ]

@@ -15,7 +15,7 @@ class Show(models.Model):
 
 
 class ShowCopy(models.Model):
-    show = models.ForeignKey(Show, on_delete=models.CASCADE)
+    show = models.ForeignKey(Show, related_name='copies', on_delete=models.CASCADE)
     platform = models.CharField('platform', max_length=200)
     form = models.CharField('format', max_length=200)
 

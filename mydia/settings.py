@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # Built-in
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Installed for project
+    'rest_framework',
+
+    # App models
     'movies.apps.MoviesConfig',
     'shows.apps.ShowsConfig',
     'books.apps.BooksConfig',

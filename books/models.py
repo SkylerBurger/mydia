@@ -11,7 +11,7 @@ class Book(models.Model):
 
 
 class BookCopy(models.Model):
-    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    book = models.ForeignKey(Book, related_name='copies', on_delete=models.CASCADE)
     platform = models.CharField('platform', max_length=200)
     form = models.CharField('format', max_length=200)
 
