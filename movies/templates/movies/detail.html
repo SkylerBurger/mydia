@@ -1,8 +1,0 @@
-<h1>{{ movie.title }} ({{ movie.release_year }})</h1>
-<p>Rating: {{ movie.mpaa_rating }}</p>
-<p>Runtime: {{ movie.run_time }}</p>
-<ul>
-    {% for copy in movie.moviecopy_set.all %}
-        <li>{{ copy.form }} copy on {{ copy.platform }}</li>
-    {% endfor %}
-</ul>
