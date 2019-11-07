@@ -2,7 +2,7 @@
 
 **Author**: Skyler Burger
 
-**Version**: 1.2.0
+**Version**: 1.3.0
 
 ## Overview
 Have you ever forgotten if you purchased that movie on DVD or Google Play? From which online book store did you pick up that copy of Stephen King's IT? Did I pay for the latest season of American Horror Story on Prime Video or Vudu? 
@@ -41,3 +41,8 @@ Whether digital or physical, :star: **Mydia** :star: is here to catalog your med
 10-27-2019 - 1.2.0
 - Integrated Django REST Framework
 - Added serializers and new views for models
+
+11-07-2019 - 1.3.0
+- Integrated Django REST Framework Simple JWT with help from [this tutorial](https://iheanyi.com/journal/user-registration-authentication-with-django-django-rest-framework-react-and-redux/)
+- Added accounts app
+- Users can be created and assigned tokens
