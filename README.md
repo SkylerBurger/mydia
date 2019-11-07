@@ -15,6 +15,7 @@ Whether digital or physical, :star: **Mydia** :star: is here to catalog your med
 
 ### Packages
 - [**Django REST Framework**](https://www.django-rest-framework.org/): Tools for building APIs with Django
+- [**Django REST Framework Simple JWT**](https://github.com/davesque/django-rest-framework-simplejwt): Plugin for DRF that allows easy creation and refreshing of JSON Web Tokens for user auth.
 
 ### Continuous Integration
 **TDB**
