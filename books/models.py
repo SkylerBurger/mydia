@@ -1,13 +1,15 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-# Create your models here.
+
 class Book(models.Model):
+    user = models.ForeignKey(User, related_name='book', on_delete=models.CASCADE)
     title = models.CharField('title', max_length=200)
     author = models.CharField('author(s)', max_length=200)
     published = models.IntegerField('published')
 
     def __str__(self):
-        return f'{self.title} by {self.author}'
+        return f'{self.user.username} - {self.title} by {self.author}'
 
 
 class BookCopy(models.Model):
@@ -16,4 +18,4 @@ class BookCopy(models.Model):
     form = models.CharField('format', max_length=200)
 
     def __str__(self):
-        return f'{self.form} of {self.book} on {self.platform}'
+        return f'{self.book.user.username}\'s {self.form} of {self.book.title} on {self.platform}'
